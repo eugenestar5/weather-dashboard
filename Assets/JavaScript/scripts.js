@@ -29,7 +29,7 @@ $(document).ready(function(){
             dayNumWeather.text(forecastDate);
             weatherIconNum = data.list[num].weather[0].icon;
             iconNum = $("<img>");
-            iconNum.attr('src', 'http://openweathermap.org/img/w/' + weatherIconNum + '.png');
+            iconNum.attr('src', 'https://openweathermap.org/img/w/' + weatherIconNum + '.png');
             dayNumWeather.append(iconNum);
 
             temNum = $('<p>');
@@ -97,7 +97,7 @@ $(document).ready(function(){
 
                     //Weather Icon
                     var Icon = $("<img>");
-                    Icon.attr('src', 'http://openweathermap.org/img/w/' + weatherIcon + '.png');
+                    Icon.attr('src', 'https://openweathermap.org/img/w/' + weatherIcon + '.png');
                     currentDay.append(Icon);
 
                     //Temperature
@@ -178,7 +178,7 @@ $(document).ready(function(){
                     var cityName = val
                     var currentDate = data.list[0].dt_txt
                     var weatherIcon = data.list[0].weather[0].icon
-                    var weatherIconUrl = 'http://openweathermap.org/img/w/'
+                    var weatherIconUrl = 'https://openweathermap.org/img/w/'
 
                     
                     currentDay.text(cityName+' ('+ dayjs(currentDate).format('MM/DD/YYYY') +') ');
