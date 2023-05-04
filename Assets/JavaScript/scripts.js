@@ -66,7 +66,7 @@ $(document).ready(function(){
         searchCity.val("");
 
         //fetching the geocode - latlong
-        var urlGeoCode = 'http://api.openweathermap.org/geo/1.0/direct?q='+ searchCityValue +'&limit=1&appid=4c44e61b21706902de209f4f1358c84d'
+        var urlGeoCode = 'https://api.openweathermap.org/geo/1.0/direct?q='+ searchCityValue +'&limit=1&appid=4c44e61b21706902de209f4f1358c84d'
     
         fetch(urlGeoCode)
             .then(function(response){
@@ -79,7 +79,7 @@ $(document).ready(function(){
                 long = data[0].lon;
 
             //fecting the weather data
-            var urlOpenWeather = 'http://api.openweathermap.org/data/2.5/forecast?lat='+ lat +'&lon='+ long +'&appid=4c44e61b21706902de209f4f1358c84d&units=imperial'
+            var urlOpenWeather = 'https://api.openweathermap.org/data/2.5/forecast?lat='+ lat +'&lon='+ long +'&appid=4c44e61b21706902de209f4f1358c84d&units=imperial'
 
             fetch(urlOpenWeather)
                 .then(function(response){
@@ -151,7 +151,7 @@ $(document).ready(function(){
                 event.preventDefault();
 
         //fetching historical geocode - latlong
-        var urlGeoCode = 'http://api.openweathermap.org/geo/1.0/direct?q='+ val +'&limit=1&appid=4c44e61b21706902de209f4f1358c84d'
+        var urlGeoCode = 'https://api.openweathermap.org/geo/1.0/direct?q='+ val +'&limit=1&appid=4c44e61b21706902de209f4f1358c84d'
     
         fetch(urlGeoCode)
             .then(function(response){
@@ -165,7 +165,7 @@ $(document).ready(function(){
                 long = data[0].lon;
 
             //fecting historical weather data
-            var urlOpenWeather = 'http://api.openweathermap.org/data/2.5/forecast?lat='+ lat +'&lon='+ long +'&appid=4c44e61b21706902de209f4f1358c84d&units=imperial'
+            var urlOpenWeather = 'https://api.openweathermap.org/data/2.5/forecast?lat='+ lat +'&lon='+ long +'&appid=4c44e61b21706902de209f4f1358c84d&units=imperial'
 
             fetch(urlOpenWeather)
                 .then(function(response){
